@@ -27,4 +27,6 @@ io.on('connection', (socket) => {
   });
 });
 
+console.log('2')
+
 server.listen(3030, '127.0.0.1')
