@@ -23,12 +23,15 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.1.5"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "linters": {
-      "src/**/*.ts": [
-        "./node_modules/.bin/eslint --fix",
-        "git add"
-      ]
+      "src/**/*.ts": "tslint"
     }
   }
 }
